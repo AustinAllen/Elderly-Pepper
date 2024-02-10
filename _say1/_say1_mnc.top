@@ -1,0 +1,29 @@
+topic: ~_say1()
+language: mnc
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+concept:(自我介绍)[自我介绍 介绍 介绍下你自己 你叫什么名字 介绍你 介绍下]
+concept:(教育应用)[教育应用 教育 教育有哪些应用 你在教育上有啥应用 教育的应用]
+concept:(互动娱乐)[互动娱乐 互动 互动和娱乐 娱乐互动 语音交互 娱乐 互动娱乐]
+
+
+u:(e:Dialog/NotSpeaking5) 我没有听到你说话，你可以点击按钮或者语音选择功能
+u:(e:Dialog/NotSpeaking10) 你还在吗?
+u:(e:Dialog/NotSpeaking15) 你是不是离开了？有什么问题可以下次问我！$output1=1
+
+u:(e:Dialog/NotUnderstood) 对不起，我没有理解您所说的话，请点击屏幕或者语音选择功能。
+u:(e:Dialog/NotUnderstood2) 如果您想和我自由聊天，可以选择互动娱乐进行自由聊天。
+u:(e:Dialog/NotUnderstood3) 您可以选择互动娱乐和我自由聊天！
+
+u:(~自我介绍)$say1=1
+u:(~教育应用)$say2=1
+u:(~互动娱乐)$say3=1
+

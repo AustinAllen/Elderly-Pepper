@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package version="0.0.2" uuid="pio_v1-c3f0e8">
+ <names>
+  <name lang="en_US">24116_v2</name>
+  <name lang="zh_CN">24116_v2</name>
+ </names>
+ <descriptions>
+  <description lang="en_US">pio</description>
+  <description lang="zh_CN">pio</description>
+ </descriptions>
+ <supportedLanguages>
+  <language>en_US</language>
+  <language>zh_CN</language>
+ </supportedLanguages>
+ <descriptionLanguages>
+  <language>en_US</language>
+  <language>zh_CN</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="behavior_1">
+   <userRequestable/>
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+  <dialogContent topicName="_say1" typeVersion="1.0">
+   <topic language="en_US" path="_say1/_say1_enu.top"/>
+   <topic language="zh_CN" path="_say1/_say1_mnc.top"/>
+  </dialogContent>
+  <dialogContent topicName="ExampleDialog" typeVersion="1.0">
+   <topic language="en_US" path="ExampleDialog/ExampleDialog_enu.top"/>
+   <topic language="zh_CN" path="ExampleDialog/ExampleDialog_mnc.top"/>
+  </dialogContent>
+ </contents>
+ <requirements>
+  <naoqiRequirement minVersion="2.5" maxVersion="2.5"/>
+  <robotRequirement model="JULIETTE"/>
+ </requirements>
+</package>

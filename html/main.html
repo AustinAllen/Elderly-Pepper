@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sender and Receiver Layout</title>
+
+    <script type="text/javascript" src="scripts/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="scripts/qimessaging.js"></script>
+    <script type="text/javascript" src="scripts/socket.io.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.qimhelpers.js"></script>
+    <script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
+
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('images/background.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            width: 100%;
+            height: 100%;
+        }
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            /* max-width: 90%; */
+            margin: 20px auto;
+            /* border: 1px solid #ccc; */
+            padding: 10px;
+            border-radius: 5px;
+            
+            /* Remove vertical scrollbar */
+            /* overflow-y: hidden; */
+        }
+        .message {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            max-width: 500px;
+            /* color: rgb(78, 163, 238); */
+        }
+        .sender {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .receiver {
+            display: flex;
+            /* display: none; */
+            justify-content: flex-start;
+        }
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            margin-left: 10px;
+            overflow: hidden;
+            /* order: 1; */
+        }
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sender .message {
+            background-color: #cce6ff;
+        }
+        /* 设置receiver的message背景颜色为淡绿色 */
+        .receiver .message {
+            background-color: #d9f7d9;
+        }
+
+
+    </style>
+</head>
+<body>
+  <div class="chat-container">
+    <!-- Sender Message -->
+    <div class="sender">
+      <div class="message">
+        <p id="prompt">Hello, this is a message from the sender.</p>
+      </div>
+      <div class="avatar">
+        <img src="images/human.png" alt="Sender Avatar">
+      </div>
+    </div>
+
+    <!-- Receiver Message -->
+    <div class="receiver">
+      <div class="avatar">
+        <img src="images/pepper.png" alt="Receiver Avatar">
+      </div>
+      <div class="message">
+        <p id="answer">Hi, this is a message from the receiver.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

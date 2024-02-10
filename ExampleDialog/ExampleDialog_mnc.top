@@ -1,0 +1,24 @@
+topic: ~ExampleDialog()
+language: mnc
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello
+
+u:(_*) $onStopped = $1
+concept:(跳舞)[你能跳舞吗 跳一支舞 跳舞 你会跳舞吗 开始跳舞 舞蹈展示 舞蹈 舞]
+concept:(握手)[握手 握个手吧 我可以和你握手吗 你会跳握手吗 开始握手 握手 握个手 握]
+concept:(拍照)[拍照 合照 我可以和你合照吗 合照 合影 一起合影 照片 照 照片姿势]
+
+u:(e:Dialog/NotSpeaking5) 你可以问我任何问题，我会回答的！
+u:(e:Dialog/NotSpeaking10) 你还在吗?
+u:(e:Dialog/NotSpeaking15) 好吧，我要回到主界面了，有什么问题可以下次问我！$output=1
+
+u:(~跳舞)我现在要开始跳舞了，请离开我1米左右！$say3=1
+u:(~握手)好的！ $say4=1
+u:(~拍照)当然可以啦！ $say5=1
