@@ -18,5 +18,4 @@ In order to make Pepper knowledgeable, we provide a comprehensive explanation of
 ![image](https://github.com/AustinAllen/Elderly-Pepper/assets/7984036/15e8b6ea-747d-47ac-bee2-b2113cd1dd52)
 
 # Technical Infrastructure - SLAM![image](https://github.com/AustinAllen/Elderly-Pepper/assets/7984036/85c53294-4031-479d-8c14-6de7b2416211)
-
 Robot Operating System (ROS) is a structured communications layer above host operating systems. It is designed to support the philosophy of modular, tool-based software development. ROS reuses code from numerous other open-source projects, such as hardware drivers, navigation system, and simulators. In each case, ROS is used only to expose various configuration options and to route data into and out of the respective software. Several hundred (or more) ROS packages exist across several publicly viewable repositories![image](https://github.com/AustinAllen/Elderly-Pepper/assets/7984036/fb79c7dc-7819-45ee-a017-a65dbdfee47f)
