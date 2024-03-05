@@ -1,8 +1,13 @@
 # Elderly-Pepper
 we present a solution of older adults' experiences with Pepper humanoid robot. The proposed solution is modular and relies on the proper integration of existing Pepper functionalities. Our research presents the Pepper robot to be able to recognize faces, communicate and interact with humans, navigation in dynamic environments.
 
+# Team Members
+Main Author: Austin Fu, Co-Author: Lincong Li
+
+
 # SETUP 
-INSTALLATION OF CHOREGRAPHE
+INSTALLATION OF CHOREGRAPHE![pepper](https://github.com/AustinAllen/Elderly-Pepper/assets/7984036/28d8cf18-0852-4ce4-9146-e81c7005af70)
+
 1. choregraphe software installation.
 2. Import the 24116.pml file into the choregraphe
 
